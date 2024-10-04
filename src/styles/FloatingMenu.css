@@ -1,0 +1,149 @@
+.floating-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000; /* Ensure the menu is above other elements */
+}
+
+/* Style for the menu button */
+.menu-button {
+  width: 70px;
+  height: 70px;
+  border: none;
+  background-color: #3498db;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+/* Change the menu button style when open */
+.menu-button.open {
+  background-color: #e74c3c;
+}
+
+/* hover effect */
+.menu-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Active state */
+.menu-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for the menu items */
+.menu-items-container {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 200px;
+}
+
+/* Style for each menu item */
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+/* Initially, only the icon is visible */
+.menu-item .icon {
+  width: 20px;
+  height: 20px;
+  background-color: #3498db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Hide text initially */
+.menu-item .text {
+  font-size: 14px;
+}
+
+/* On hover, display text and change background color */
+.menu-item:hover {
+  background-color: #f8f9fa;
+}
+
+.menu-item:hover .icon {
+  transform: scale(1.1);
+}
+
+.menu-item:hover .text {
+  opacity: 1;
+}
+
+/* When the menu is open, make the menu items visible */
+.menu-items-container .menu-item {
+  opacity: 1;
+}
+
+/* Remove the quarter-circle arrangement */
+.menu-item:nth-child(1),
+.menu-item:nth-child(2),
+.menu-item:nth-child(3),
+.menu-item:nth-child(4) {
+  transform: none;
+}
+
+/* Add more nth-child selectors for additional menu items */
+
+/* Add these styles to your existing FloatingMenu.css */
+
+.user-info {
+  background-color: #e9ecef;
+  font-weight: bold;
+  padding: 15px;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 5px;
+}
+
+.welcome-message {
+  font-size: 14px;
+  color: #495057;
+  font-weight: bold;
+}
+
+.logout-button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px 15px;
+  color: #495057;
+  transition: background-color 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #e9ecef;
+}
+
+/* Remove any styles related to top-right corner display */
